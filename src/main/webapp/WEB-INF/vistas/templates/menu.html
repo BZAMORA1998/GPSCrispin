@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head></head>
+    <body>
+        <!-- BEGIN: Main Menu-->
+        <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true" th:fragment="menu">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav flex-row">
+                    <li class="nav-item mr-auto">
+                        <!--a class="navbar-brand" href="../../../html/ltr/vertical-menu-template/index.html">
+                            <div class="brand-logo"><img class="logo" th:src="@{/resources/images/logo/logo.png}"/></div>
+                            <h2 class="brand-text mb-0">Frest</h2>
+                        </a-->
+                    </li>
+                    <li class="nav-item nav-toggle">
+                        <a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse">
+                            <i class="bx bx-x d-block d-xl-none font-medium-4 primary"></i>
+                            <i class="toggle-icon bx bx-disc font-medium-4 d-none d-xl-block primary" data-ticon="bx-disc"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="shadow-bottom"></div>
+            <div class="main-menu-content">
+                <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="lines">
+                    <li class=" nav-item">
+                        <a href="#">
+                            <i class="menu-livicon" data-icon="settings"></i>
+                            <span class="menu-title" data-i18n="Invoice">Administraci&#243;n</span>
+                        </a>
+                        <ul class="menu-content">
+                            <li>
+                                <a th:href="@{/administracion/usuario}">
+                                    <i class="bx bx-right-arrow-alt"></i>
+                                    <span class="menu-item" data-i18n="Invoice List">Usuarios</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a th:href="@{/administracion/contrasenia}">
+                                    <i class="bx bx-right-arrow-alt"></i>
+                                    <span class="menu-item" data-i18n="Invoice">Cambio contraseña</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class=" nav-item">
+                        <a href="#">
+                            <i class="menu-livicon" data-icon="wrench"></i>
+                            <span class="menu-title" data-i18n="Invoice">Recolector</span>
+                        </a>
+                        <ul class="menu-content">
+                            <li>
+                                <a th:href="@{/recolector/Configuracion_streaming}">
+                                    <i class="bx bx-right-arrow-alt"></i>
+                                    <span class="menu-item">Configuracion del Streaming</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a th:href="@{/recolector/offline}">
+                                    <i class="bx bx-right-arrow-alt"></i>
+                                    <span class="menu-item" data-i18n="Invoice">Offline</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a th:href="@{/recolector/online}">
+                                    <i class="bx bx-right-arrow-alt"></i>
+                                    <span class="menu-item" data-i18n="Invoice">Online</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a th:href="@{/recolector/verificacion}">
+                                    <i class="bx bx-right-arrow-alt"></i>
+                                    <span class="menu-item" data-i18n="Invoice">Verificación</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class=" nav-item">
+                        <a href="#">
+                            <i class="menu-livicon" data-icon="pie-chart"></i>
+                            <span class="menu-title" data-i18n="Invoice">Reporteria</span>
+                        </a>
+                        <ul class="menu-content">
+                            <li>
+                                <a href="@{/reporteria/reporte_general}">
+                                    <i class="bx bx-right-arrow-alt"></i>
+                                    <span class="menu-item" data-i18n="Invoice List">Reportes General</span>
+                                </a>
+                            </li>
+                            <!--<li>
+                                <a href="app-invoice-list.html">
+                                    <i class="bx bx-right-arrow-alt"></i>
+                                    <span class="menu-item" data-i18n="Invoice List">Dashboard</span>
+                                </a>
+                            </li>-->
+                        </ul>
+                    </li>                    
+                </ul>
+            </div>
+        </div>
+        <!-- END: Main Menu-->
+    </body>
+</html>

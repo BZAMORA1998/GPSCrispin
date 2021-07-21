@@ -1,0 +1,76 @@
+<!--
+Document   : index
+Created on : 06/07/2021, 11:02:16
+Author     : CRISPIN
+-->
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{templates/master.html}">
+    <head>
+        <title>Cambio Contraseña</title>
+    </head>
+    <body>
+        <div class="content-wrapper" layout:fragment="content">    
+            <div class="content-header row"></div>
+            <div class="content-body">
+                <section id="backcolor">
+                    <div class="card background-color">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-header">
+                                    <h4 class="card-title">Mantenimiento de Usuarios</h4>
+                                </div>
+                                <div class="card-content">
+                                     <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <form action="#" class="dropzone dropzone-area" id="emp_dpz_img_empresa">
+                                                    <div class="dz-message">Suba la imagen que represente su perfil</div>
+                                                </form>
+                                               <fieldset class="form-group">
+                                                    <label for="helpInputTop">Contraseña</label>
+                                                    <input type="text" class="form-control" id="helpInputTop" value="123456" disabled="">
+                                                </fieldset>
+                                                <fieldset class="form-group">
+                                                    <label for="helpInputTop">Confirmar Contraseña</label>
+                                                    <input type="text" class="form-control" id="helpInputTop" value="123456" disabled="">
+                                                </fieldset>
+
+                                            </div>
+                                            <div class="col-md-6">
+                                                <fieldset class="form-group">
+                                                    <label for="helpInputTop">Nombres</label>
+                                                    <input type="text" class="form-control" id="helpInputTop" value="Cristóbal" disabled="">
+                                                </fieldset> 
+                                              <fieldset class="form-group">
+                                                    <label for="helpInputTop">Apellidos</label>
+                                                    <input type="text" class="form-control" id="helpInputTop" value="Pin" disabled="">
+                                                </fieldset>
+                                                <fieldset class="form-group">
+                                                    <label for="helpInputTop">Cedula</label>
+                                                    <input type="text" class="form-control" id="helpInputTop" value="1313311092" disabled="">
+                                                </fieldset>
+                                                <fieldset class="form-group">
+                                                    <label for="helpInputTop">Direccion</label>
+                                                    <input type="text" class="form-control" id="helpInputTop" value="Florida Norte Mz 294 Villa 14" disabled="">
+                                                </fieldset>
+                                                <fieldset class="form-group">
+                                                    <label for="helpInputTop">Email</label>
+                                                    <input type="text" class="form-control" id="helpInputTop" value="crispin1007@hotmail.com" disabled="">
+                                                </fieldset> 
+                                            </div>
+                                            <div class="col-md-12">
+                                                <button id="btn_prueba_gbr" class="btn btn-primary" type="button">Guardar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+                        
+        </div>
+
+    </body>
+</html>

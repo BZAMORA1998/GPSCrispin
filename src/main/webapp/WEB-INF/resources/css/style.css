@@ -1,0 +1,78 @@
+/*================================================================================
+    Document   : index
+    Created on : 06/07/2021, 11:02:16
+    Author     : CRISPIN
+	Author URL: https://www.alphancodegroup.com
+================================================================================
+
+*/
+
+#emp_dpz_img_empresa {
+    border: 2px dashed #5A8DEE;
+    background: #F2F4F4;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    margin: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.dropzone .dz-message {
+    text-align: center;
+    margin: 0px;
+}
+
+.dropzone .dz-preview.dz-image-preview {
+    background: none;
+}
+
+.dropzone .dz-preview .dz-details {
+    height: 180px;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    font-size: 13px;
+    min-width: 100%;
+    max-width: 100%;
+    /* padding: 2em 1em; */
+    text-align: center;
+    color: rgba(0,0,0,0.9);
+    line-height: 150%;
+}
+
+.dropzone .dz-preview {
+    margin: 0px;
+}
+
+.dropzone .dz-preview .dz-image > img {
+    vertical-align: middle;
+    border-radius: 50%;
+    height: 160px;
+}
+
+.dropzone .dz-preview .dz-image {
+    border-radius: 0px;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropzone {
+    padding: 0px;
+}
+
+.dropzone .dz-preview:hover .dz-details {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}

@@ -1,0 +1,74 @@
+
+<!--
+Document   : index
+Created on : 06/07/2021, 11:02:16
+Author     : CRISPIN
+-->
+
+
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{templates/master.html}">
+    <head>
+        <title>Reproductor Online</title>
+    </head>
+    <body>
+        <div class="content-wrapper" layout:fragment="content">
+            <div class="content-header row"></div>
+            <div class="content-body">
+                <section id="backcolor">
+                    <div class="card background-color">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-header">
+                                    <h4 class="card-title">Streaming Online</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-10">
+
+
+                                                <fieldset class="form-group">
+                                                    <label for="basicInput">Reproducir</label>
+                                                    <input type="text" class="form-control" id="basicInput" value=""  placeholder="Examinar" disabled>
+                                                </fieldset>
+
+                                                <video id="player" class="video-js vjs-default-skin" width="800" height="440"  controls preload="none">
+                                                    <source src="http://159.65.233.9:8080/live/.m3u8" type="application/x-mpegURL" />
+                                                </video>
+
+
+
+                                            </div>
+                                            <div class="col-md-2">
+                                                <fieldset class="form-group">
+                                                    <label for="basicInput">IP Servidor</label>
+                                                    <input type="text" class="form-control" id="basicInput" value="159.65.233.9"  placeholder="IP Servidor" disabled>
+                                                </fieldset>
+                                                <fieldset class="form-group">
+                                                    <label for="basicInput">Marca del Drone</label>
+                                                    <input type="text" class="form-control" id="basicInput" value="DJI"  placeholder="DJI" disabled>
+                                                </fieldset>
+                                                <fieldset class="form-group">
+                                                    <label for="basicInput">Identificador del Drone</label>
+                                                    <input type="text" class="form-control" id="basicInput" value="163CG7E00102X5"  placeholder="163CG7E00102X5" disabled>
+                                                </fieldset>
+                                                <fieldset class="form-group">
+                                                    <label for="basicInput">Modelo del Drone</label>
+                                                    <input type="text" class="form-control" id="modelo_drone" value="Mavic 2 PRO"  placeholder="modelo_drone" disabled>
+                                                </fieldset>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <script th:src="@{/resources/js/core/mantenimiento/producto_servicio.js?v=01" type="text/javascript"></script>
+    </body>
+</html>
