@@ -27,43 +27,35 @@ public class FncLogin extends DataBase {
     private Statement stmt = null;
     //DataBase dt = new DataBase();
 
-    public obj_control ValidaUsuario(String usuario, String password) {
+    public obj_control ValidaUsuario(String usuario, String password){
 
-        try {
-            String query = "{CALL login_user(?,?,?,?,?,?)}";
+        try{
+            try{
+                String res="";
+                conn = getConexion();    
+                stmt = conn.createStatement();
+                  rs = stmt.executeQuery("SELECT login_user('"+usuario+"','"+password+"'); ");
+                  while (rs.next())
+                  {
+                    res=rs.getString(1);
+                  }
 
-            conn = getConexion();
-            conn.setAutoCommit(false);
-            CallableStatement stmt = conn.prepareCall(query);
+                ObjCtr.setCod(7);
+                ObjCtr.setMensaje("prueba");
+                ObjCtr.setDato1("prueba");
+                ObjCtr.setDato2("prueba");
 
-            stmt.setString(1, usuario);
-            stmt.setString(2, password);
-            stmt.registerOutParameter("cod", Types.INTEGER);
-            stmt.registerOutParameter("mensaje", Types.VARCHAR);
-            stmt.registerOutParameter("dato1", Types.VARCHAR);
-            stmt.registerOutParameter("dato2", Types.VARCHAR);
+                stmt.close();
+                conn.close();
 
-            stmt.execute();
-
-            int outputValue = stmt.getInt("cod");
-            String mensaje = stmt.getString("mensaje");
-            String dato1 = stmt.getString("dato1");
-            String dato2 = stmt.getString("dato2");
-
-            ObjCtr.setCod(7);
-            ObjCtr.setCod(outputValue);
-            ObjCtr.setMensaje(mensaje);
-            ObjCtr.setDato1(dato1);
-            ObjCtr.setDato2(dato2);
-
-            stmt.close();
-            conn.close();
-
-            return ObjCtr;
-        } catch (Exception e) {
-            System.out.print("Exception:" + e);
-        }
-        return null;
+                return ObjCtr;
+            }catch (SQLException ex) {
+    	        System.err.println( ex.getMessage() );
+    	   }		        
+    	}catch(Exception e) {
+    		  System.out.print("Exception:"+e);
+    	}
+          return ObjCtr;   
     }
 
     public obj_usuario ObtenerDatosUsuario(String usuario) throws SQLException {
