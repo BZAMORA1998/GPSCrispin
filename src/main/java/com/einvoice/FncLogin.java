@@ -31,9 +31,9 @@ public class FncLogin extends DataBase {
 
         try{
             try{
-                String res="";
-                conn = getConexion();    
-                stmt = conn.createStatement();
+                  String res="";
+                  conn = getConexion();    
+                  stmt = conn.createStatement();
                   rs = stmt.executeQuery("SELECT login_user('"+usuario+"','"+password+"'); ");
                   while (rs.next())
                   {
